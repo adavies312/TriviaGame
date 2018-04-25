@@ -1,0 +1,49 @@
+body {
+    background-image: url("./assets/images/simpsons-clouds.jpg")!important;
+}
+
+
+.jumbotron {
+    font-family: 'Rock Salt', cursive;
+    opacity: .6;
+    color: yellow;
+    background-color: #000000;
+
+}
+
+#finished {
+    margin: 20px;
+    padding: 20px;
+    width: 50%;
+    font-family: 'Rock Salt', cursive;
+
+}
+
+#gameArea {
+    text-align:center;
+}
+
+#click-to-start {
+    font-family: 'Rock Salt', cursive;
+    text-align:center;
+    width: 50%
+
+}
+
+#results {
+    text-align:center;
+    font-family: 'Rock Salt', cursive;
+
+}
+
+#restart {
+    margin-top: 50px;
+    width: 50%
+}
+
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}

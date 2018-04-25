@@ -1,7 +1,7 @@
 // initialize variables 
-var correctCount = 0;
-var incorrectCount = 0;
-var unansweredCount = 0;
+var correct = 0;
+var incorrect = 0;
+var unanswered = 0;
 var time = 45;
 
 $(document).ready(function () {
@@ -75,125 +75,24 @@ $(document).ready(function () {
         // If / Else If / Else statements to determine if user got right answer
         //scaling results
         //array of questions
-        //variable questions =[Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10]
-
         //array of answers
-        // answers = ["a", "c", "b", "c", "d", "d", "a", "b", "c", "d"]
-        //for loop i=0 i<questions.length i++
-        // if Question[i] = 
-        if (Q1 === undefined) {
-            unansweredCount++;
-        }
-        else if (Q1 === "a") {
-            correctCount++;
-        }
-        else {
-            incorrectCount++;
-        }
+        var questions = [Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10];
+        var answers = ["a", "c", "b", "c", "d", "d", "a", "b", "c", "d"];
 
-
-        if (Q2 === undefined) {
-            unansweredCount++;
-        }
-        else if (Q2 === "c") {
-            correctCount++;
-        }
-        else {
-            incorrectCount++;
-        }
-
-
-        if (Q3 === undefined) {
-            unansweredCount++;
-        }
-        else if (Q3 === "b") {
-            correctCount++;
-        }
-        else {
-            incorrectCount++;
-        }
-
-
-        if (Q4 === undefined) {
-            unansweredCount++;
-        }
-        else if (Q4 === "c") {
-            correctCount++;
-        }
-        else {
-            incorrectCount++;
-        }
-
-
-        if (Q5 === undefined) {
-            unansweredCount++;
-        }
-        else if (Q5 === "d") {
-            correctCount++;
-        }
-        else {
-            incorrectCount++;
-        }
-
-
-        if (Q6 === undefined) {
-            unansweredCount++;
-        }
-        else if (Q6 === "d") {
-            correctCount++;
-        }
-        else {
-            incorrectCount++;
-        }
-
-
-        if (Q7 === undefined) {
-            unansweredCount++;
-        }
-        else if (Q7 === "a") {
-            correctCount++;
-        }
-        else {
-            incorrectCount++;
-        }
-
-
-        if (Q8 === undefined) {
-            unansweredCount++;
-        }
-        else if (Q8 === "b") {
-            correctCount++;
-        }
-        else {
-            incorrectCount++;
-        }
-
-
-        if (Q9 === undefined) {
-            unansweredCount++;
-        }
-        else if (Q9 === "c") {
-            correctCount++;
-        }
-        else {
-            incorrectCount++;
-        }
-
-
-        if (Q10 === undefined) {
-            unansweredCount++;
-        }
-        else if (Q10 === "d") {
-            correctCount++;
-        }
-        else {
-            incorrectCount++;
-        }
+        for (var i=0; i<questions.length; i++) {
+            if (questions[i] === answers[i]) {
+                correct++;
+            } else if (questions[i] === undefined) {
+               unanswered++;
+            } else {
+                incorrect++;
+            }
+        };
 
         // Update the DOM
-        $('#correct').html(correctCount);
-        $('#incorrect').html(incorrectCount);
-        $('#unanswered').html(unansweredCount);
+        $('#correct').html(correct);
+        $('#incorrect').html(incorrect);
+        $('#unanswered').html(unanswered);
 
 
         // Reveal results
@@ -203,9 +102,9 @@ $(document).ready(function () {
     //Reset function to restart the quiz on button click
     $("#restart").on("click", function () {
         time = 45;
-        correctCount = 0;
-        incorrectCount = 0;
-        unansweredCount = 0;
+        correct = 0;
+        incorrect = 0;
+        unanswered = 0;
         $("#results").hide();
         $("#gameArea").show();
         startCountdown();

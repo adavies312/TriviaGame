@@ -1,14 +1,13 @@
 body {
-    background-image: url("./assets/images/simpsons-clouds.jpg")!important;
+    background-image: url("../images/simpsons-clouds.jpg");
 }
 
 
 .jumbotron {
     font-family: 'Rock Salt', cursive;
     opacity: .6;
-    color: yellow;
+    color: yellow;    
     background-color: #000000;
-
 }
 
 #finished {

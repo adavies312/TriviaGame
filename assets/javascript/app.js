@@ -69,7 +69,7 @@ $(document).ready(function () {
         var Q10 = $('input:radio[name="q10"]:checked').val();
 
         // If / Else If / Else statements to determine if user got right answer
-        //scaling results with for loop
+        // Scaled validating results with for loop
         var questions = [Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10];
         var answers = ["a", "c", "b", "c", "d", "d", "a", "b", "c", "d"];
 
@@ -117,55 +117,54 @@ $(document).ready(function () {
     });
 
 
-     /* Dynamically adding content instead of displaying in HTML--
-     Only was able to get it to display questions and answers by 
-     placing a for loop in my start game function. Was unable to 
-     get it to check answers in time ----
-
-    create an object with the questions, 
-    answers, and correct choice:
+     /* 
+     
+     --Dynamically adding content instead of displaying in HTML--
+     I only was able to get it to display questions and answers. However 
+     I was unable to get it to validate answers from radio buttons. Here is
+     what I got:
+***************************************************************************
+    step 1: 
+            create an object triviaQuestions with properties: questions & answers
+***************************************************************************
 
     var triviaQuestions = [{
 	question: "Where does Homer work?",
 	answerList: ["Nuclear Power Plant", "Bar", "Insurance Company", "School"],
-	answer: 0
 },{
 	question: "What instrument does Lisa play?",
 	answerList: ["Guitar", "Piano", "Saxophone", "Violin"],
-	answer: 2
 },{
 	question: "What family do the Simpsons live next to?",
 	answerList: ["The Wiggums", "The Flanders", "The Sanders", "The Skinners"],
-	answer: 1
 },{
 	question: "Who shot Mr. Burns?",
 	answerList: ["Snake", "Sideshow Bob", "Maggie Simpson", "Waylon Smithers"],
-	answer: 2
 },{
 	question: "What does the 'J' in Homer J. Simpson stand for?",
 	answerList: ["Jake", "John", "Jason", "Jay"],
-	answer: 3
 },{
 	question: "What phrase made Bart famous?",
 	answerList: ["Eat my shorts!", "Ay caramba!", "Don't have a cow, man!", "I didn't do it!"],
-	answer: 3
 },{
 	question: "What secret society is Homer a part of?",
 	answerList: ["The Stonecutters", "Free Masons", "Duff", "Illuminati"],
-	answer: 0
 },{
 	question: "Where does Apu work?",
 	answerList: ["7/11", "Kwik E-Mart", "Quick Stop Groceries", "Springfield Market"],
-	answer: 1
 },{
 	question: "How many seasons of the show are there?",
 	answerList: ["22", "26", "29", "33"],
-	answer: 2
 },{
 	question: "Who is the local bartender?",
 	answerList: ["Lenny", "Karl", "Krusty", "Moe"],
-	answer: 3
 }];
+***************************************************************************
+        step 2:
+                create a for loop to dynamically display each question
+                and then append each q and a to the gameArea div in order
+***************************************************************************
+
         for (var i=0; i< triviaQuestions.length; i++){
         var newElement = $("<div>");
         var newElement2 = $("<div>" );

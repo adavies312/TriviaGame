@@ -18,7 +18,7 @@ $(document).ready(function () {
 
     // startGame function
     // Time Keeps on Ticking Ticking Ticking (show the countdown)
-    // on click to start hide button and show game area
+    // on click-to-start hide button and show game area
     function startGame() {
         intervalId = setInterval(countdown, 1000);
         $("#click-to-start").hide();
@@ -30,7 +30,7 @@ $(document).ready(function () {
         time--;
 
         // Show time left in DOM
-        $('#countdown').html(time + " Seconds");
+        $("#countdown").html(time + " Seconds");
 
         // When there are 0 seconds left
         if (time < 0) {
@@ -84,9 +84,9 @@ $(document).ready(function () {
         };
 
         // Update the DOM
-        $('#correct').html(correct);
-        $('#incorrect').html(incorrect);
-        $('#unanswered').html(unanswered);
+        $("#correct").html(correct);
+        $("#incorrect").html(incorrect);
+        $("#unanswered").html(unanswered);
 
         // Reveal results
         $("#results").show();
@@ -173,6 +173,14 @@ $(document).ready(function () {
         newElement2.html("<input type='radio' name='q1' value='a'>     " + triviaQuestions[i].answerList[0] + "     <input type='radio' name='q1' value='b'>     " + triviaQuestions[i].answerList[1] + "     <input type='radio' name='q1' value='c'>     " + triviaQuestions[i].answerList[2] + "     <input type='radio' name='q1' value='d'>     " + triviaQuestions[i].answerList[3] + "<br>" )
         $("#gameArea").append(newElement2);
         };
+
+ ****************************************************************************
+        step 3:
+                Validate Results
+                Display Results in DOM
+
+ ****************************************************************************
+
 
         */
 });

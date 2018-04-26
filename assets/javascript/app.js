@@ -42,7 +42,7 @@ $(document).ready(function () {
     }
 
     //when you click Done it calls the stop function 
-      $("#done").on("click", stop);
+    $("#done").on("click", stop);
 
     //stop function (for when you click the done button)
     function stop() {
@@ -73,11 +73,11 @@ $(document).ready(function () {
         var questions = [Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10];
         var answers = ["a", "c", "b", "c", "d", "d", "a", "b", "c", "d"];
 
-        for (var i=0; i<questions.length; i++) {
+        for (var i = 0; i < questions.length; i++) {
             if (questions[i] === answers[i]) {
                 correct++;
             } else if (questions[i] === undefined) {
-               unanswered++;
+                unanswered++;
             } else {
                 incorrect++;
             }
@@ -116,4 +116,64 @@ $(document).ready(function () {
 
     });
 
+
+     /* Dynamically adding content instead of displaying in HTML--
+     Only was able to get it to display questions and answers by 
+     placing a for loop in my start game function. Was unable to 
+     get it to check answers in time ----
+
+    create an object with the questions, 
+    answers, and correct choice:
+
+    var triviaQuestions = [{
+	question: "Where does Homer work?",
+	answerList: ["Nuclear Power Plant", "Bar", "Insurance Company", "School"],
+	answer: 0
+},{
+	question: "What instrument does Lisa play?",
+	answerList: ["Guitar", "Piano", "Saxophone", "Violin"],
+	answer: 2
+},{
+	question: "What family do the Simpsons live next to?",
+	answerList: ["The Wiggums", "The Flanders", "The Sanders", "The Skinners"],
+	answer: 1
+},{
+	question: "Who shot Mr. Burns?",
+	answerList: ["Snake", "Sideshow Bob", "Maggie Simpson", "Waylon Smithers"],
+	answer: 2
+},{
+	question: "What does the 'J' in Homer J. Simpson stand for?",
+	answerList: ["Jake", "John", "Jason", "Jay"],
+	answer: 3
+},{
+	question: "What phrase made Bart famous?",
+	answerList: ["Eat my shorts!", "Ay caramba!", "Don't have a cow, man!", "I didn't do it!"],
+	answer: 3
+},{
+	question: "What secret society is Homer a part of?",
+	answerList: ["The Stonecutters", "Free Masons", "Duff", "Illuminati"],
+	answer: 0
+},{
+	question: "Where does Apu work?",
+	answerList: ["7/11", "Kwik E-Mart", "Quick Stop Groceries", "Springfield Market"],
+	answer: 1
+},{
+	question: "How many seasons of the show are there?",
+	answerList: ["22", "26", "29", "33"],
+	answer: 2
+},{
+	question: "Who is the local bartender?",
+	answerList: ["Lenny", "Karl", "Krusty", "Moe"],
+	answer: 3
+}];
+        for (var i=0; i< triviaQuestions.length; i++){
+        var newElement = $("<div>");
+        var newElement2 = $("<div>" );
+        newElement.html("<br>" +"<h2>" + triviaQuestions[i].question + "</h2>" + "<br>" );
+        $("#gameArea").append(newElement);
+        newElement2.html("<input type='radio' name='q1' value='a'>     " + triviaQuestions[i].answerList[0] + "     <input type='radio' name='q1' value='b'>     " + triviaQuestions[i].answerList[1] + "     <input type='radio' name='q1' value='c'>     " + triviaQuestions[i].answerList[2] + "     <input type='radio' name='q1' value='d'>     " + triviaQuestions[i].answerList[3] + "<br>" )
+        $("#gameArea").append(newElement2);
+        };
+
+        */
 });

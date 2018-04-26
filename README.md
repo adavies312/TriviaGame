@@ -1,4 +1,4 @@
-#The Simpsons Trivia Game
+# The Simpsons Trivia Game
 
 ## Basic Quiz (Timed Form)
 

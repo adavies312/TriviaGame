@@ -117,70 +117,70 @@ $(document).ready(function () {
     });
 
 
-     /* 
-     
-     --Dynamically adding content instead of displaying in HTML--
-     I only was able to get it to display questions and answers. However 
-     I was unable to get it to validate answers from radio buttons. Here is
-     what I got:
+    /* 
+    
+    --Dynamically adding content instead of displaying in HTML--
+    I only was able to get it to display questions and answers. However 
+    I was unable to get it to validate answers from radio buttons. Here is
+    what I got:
 ***************************************************************************
-    step 1: 
-            create an object triviaQuestions with properties: questions & answers
+   step 1: 
+           create an object triviaQuestions with properties: questions & answers
 ***************************************************************************
 
-    var triviaQuestions = [{
-	question: "Where does Homer work?",
-	answerList: ["Nuclear Power Plant", "Bar", "Insurance Company", "School"],
+   var triviaQuestions = [{
+   question: "Where does Homer work?",
+   answerList: ["Nuclear Power Plant", "Bar", "Insurance Company", "School"],
 },{
-	question: "What instrument does Lisa play?",
-	answerList: ["Guitar", "Piano", "Saxophone", "Violin"],
+   question: "What instrument does Lisa play?",
+   answerList: ["Guitar", "Piano", "Saxophone", "Violin"],
 },{
-	question: "What family do the Simpsons live next to?",
-	answerList: ["The Wiggums", "The Flanders", "The Sanders", "The Skinners"],
+   question: "What family do the Simpsons live next to?",
+   answerList: ["The Wiggums", "The Flanders", "The Sanders", "The Skinners"],
 },{
-	question: "Who shot Mr. Burns?",
-	answerList: ["Snake", "Sideshow Bob", "Maggie Simpson", "Waylon Smithers"],
+   question: "Who shot Mr. Burns?",
+   answerList: ["Snake", "Sideshow Bob", "Maggie Simpson", "Waylon Smithers"],
 },{
-	question: "What does the 'J' in Homer J. Simpson stand for?",
-	answerList: ["Jake", "John", "Jason", "Jay"],
+   question: "What does the 'J' in Homer J. Simpson stand for?",
+   answerList: ["Jake", "John", "Jason", "Jay"],
 },{
-	question: "What phrase made Bart famous?",
-	answerList: ["Eat my shorts!", "Ay caramba!", "Don't have a cow, man!", "I didn't do it!"],
+   question: "What phrase made Bart famous?",
+   answerList: ["Eat my shorts!", "Ay caramba!", "Don't have a cow, man!", "I didn't do it!"],
 },{
-	question: "What secret society is Homer a part of?",
-	answerList: ["The Stonecutters", "Free Masons", "Duff", "Illuminati"],
+   question: "What secret society is Homer a part of?",
+   answerList: ["The Stonecutters", "Free Masons", "Duff", "Illuminati"],
 },{
-	question: "Where does Apu work?",
-	answerList: ["7/11", "Kwik E-Mart", "Quick Stop Groceries", "Springfield Market"],
+   question: "Where does Apu work?",
+   answerList: ["7/11", "Kwik E-Mart", "Quick Stop Groceries", "Springfield Market"],
 },{
-	question: "How many seasons of the show are there?",
-	answerList: ["22", "26", "29", "33"],
+   question: "How many seasons of the show are there?",
+   answerList: ["22", "26", "29", "33"],
 },{
-	question: "Who is the local bartender?",
-	answerList: ["Lenny", "Karl", "Krusty", "Moe"],
+   question: "Who is the local bartender?",
+   answerList: ["Lenny", "Karl", "Krusty", "Moe"],
 }];
 ***************************************************************************
-        step 2:
-                create a for loop to dynamically display each question
-                and then append each q and a to the gameArea div in order
+       step 2:
+               create a for loop to dynamically display each question
+               and then append each q and a to the gameArea div in order
 ***************************************************************************
 
-        for (var i=0; i< triviaQuestions.length; i++){
-        var newElement = $("<div>");
-        var newElement2 = $("<div>" );
-        newElement.html("<br>" +"<h2>" + triviaQuestions[i].question + "</h2>" + "<br>" );
-        $("#gameArea").append(newElement);
-        newElement2.html("<input type='radio' name='q1' value='a'>     " + triviaQuestions[i].answerList[0] + "     <input type='radio' name='q1' value='b'>     " + triviaQuestions[i].answerList[1] + "     <input type='radio' name='q1' value='c'>     " + triviaQuestions[i].answerList[2] + "     <input type='radio' name='q1' value='d'>     " + triviaQuestions[i].answerList[3] + "<br>" )
-        $("#gameArea").append(newElement2);
-        };
+       for (var i=0; i< triviaQuestions.length; i++){
+       var newElement = $("<div>");
+       var newElement2 = $("<div>" );
+       newElement.html("<br>" +"<h2>" + triviaQuestions[i].question + "</h2>" + "<br>" );
+       $("#gameArea").append(newElement);
+       newElement2.html("<input type='radio' name='q1' value='a'>     " + triviaQuestions[i].answerList[0] + "     <input type='radio' name='q1' value='b'>     " + triviaQuestions[i].answerList[1] + "     <input type='radio' name='q1' value='c'>     " + triviaQuestions[i].answerList[2] + "     <input type='radio' name='q1' value='d'>     " + triviaQuestions[i].answerList[3] + "<br>" )
+       $("#gameArea").append(newElement2);
+       };
 
- ****************************************************************************
-        step 3:
-                Validate Results
-                Display Results in DOM
+****************************************************************************
+       step 3:
+               Validate Results
+               Display Results in DOM
 
- ****************************************************************************
+****************************************************************************
 
 
-        */
+       */
 });

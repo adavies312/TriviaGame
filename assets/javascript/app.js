@@ -13,24 +13,17 @@ $(document).ready(function () {
     //Hide results until the end of the game
     $("#results").hide();
 
-    //On click to start you hide the click to start button and show the game area 
-    // Start counting down time
-    $("#click-to-start").on("click", function () {
-        $("#start-game").hide();
-        $("#gameArea").show();
-        startCountdown();
-    });
+    //On click 'click to start' button you run startGame
+    $("#click-to-start").on("click", startGame);
 
-    //Time Keeps on Ticking Ticking Ticking
-    // Show the countdown
-    //increment is 1 second
-    function startCountdown() {
-
+    // startGame function
+    // Time Keeps on Ticking Ticking Ticking (show the countdown)
+    // on click to start hide button and show game area
+    function startGame() {
         intervalId = setInterval(countdown, 1000);
-
+        $("#click-to-start").hide();
+        $("#gameArea").show();
     }
-//when you click Done it calls the stop function 
-    $("#finished").on("click", stop);
 
     // Countdown function decrements time and displays it in DOM
     function countdown() {
@@ -46,9 +39,12 @@ $(document).ready(function () {
             clearInterval(intervalId);
 
         }
-
     }
-    //stop function for when you click the done button 
+
+    //when you click Done it calls the stop function 
+      $("#done").on("click", stop);
+
+    //stop function (for when you click the done button)
     function stop() {
         clearInterval(intervalId);
         validateResults();
@@ -73,9 +69,7 @@ $(document).ready(function () {
         var Q10 = $('input:radio[name="q10"]:checked').val();
 
         // If / Else If / Else statements to determine if user got right answer
-        //scaling results
-        //array of questions
-        //array of answers
+        //scaling results with for loop
         var questions = [Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10];
         var answers = ["a", "c", "b", "c", "d", "d", "a", "b", "c", "d"];
 
@@ -94,7 +88,6 @@ $(document).ready(function () {
         $('#incorrect').html(incorrect);
         $('#unanswered').html(unanswered);
 
-
         // Reveal results
         $("#results").show();
     }
@@ -107,7 +100,7 @@ $(document).ready(function () {
         unanswered = 0;
         $("#results").hide();
         $("#gameArea").show();
-        startCountdown();
+        startGame();
         countdown();
         //Clear Radio Choices from first time 
         $('input[name=q1]').attr('checked', false);

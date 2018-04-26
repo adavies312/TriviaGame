@@ -5,17 +5,9 @@ body {
 
 .jumbotron {
     font-family: 'Rock Salt', cursive;
-    opacity: .6;
+    opacity: .7;
     color: yellow;    
     background-color: #000000;
-}
-
-#finished {
-    margin: 20px;
-    padding: 20px;
-    width: 50%;
-    font-family: 'Rock Salt', cursive;
-
 }
 
 #gameArea {
@@ -25,19 +17,29 @@ body {
 #click-to-start {
     font-family: 'Rock Salt', cursive;
     text-align:center;
-    width: 50%
+    width: 100%
+}
 
+#click-to-start:hover{
+    background-color:red;
+    color: yellow;
+}
+
+#done {
+    width:75%;
+    font-family: 'Rock Salt', cursive;
+    margin: 0px 0px 50px 0px; 
+    padding: 25px 0px; 
 }
 
 #results {
     text-align:center;
     font-family: 'Rock Salt', cursive;
-
 }
 
 #restart {
     margin-top: 50px;
-    width: 50%
+    width: 50%;
 }
 
 h1 {

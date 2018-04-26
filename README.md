@@ -1,6 +1,6 @@
-# TriviaGame
+#The Simpsons Trivia Game
 
-#Basic Quiz (Timed Form)
+## Basic Quiz (Timed Form)
 
 * You'll create a trivia form with multiple choice or true/false options (your choice).
 
@@ -11,3 +11,12 @@
 * Don't let the player pick more than one answer per question.
 
 * Don't forget to include a countdown timer.
+
+
+# Built With
+* HTML
+* CSS
+* JavaScript
+* jQuery
+* Bootstrap
+* Google Fonts

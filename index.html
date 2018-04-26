@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Passion+One|Permanent+Marker|Rock+Salt" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Trivia Game</title>
@@ -19,10 +19,12 @@
                 <h1>The Simpsons Trivia</h1>
             </div>
             <div id="start-game" class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <button id="click-to-start" class="btn btn-success btn-lg">Click to Start</button>
+                </div>
+                <div class="col-md-3">
                 </div>
             </div>
         </div>
@@ -33,86 +35,99 @@
         <h1 class>Time Remaining:
             <span id="countdown">45 Seconds</span>
         </h1>
-        <h2>1. Where does Homer work?</h2>
-        <input type="radio" name="q1" value="a">Nuclear Power Plant
-        <input type="radio" name="q1" value="b">Bar
-        <input type="radio" name="q1" value="c">Insurance Company
-        <input type="radio" name="q1" value="d">School
-        <br>
-        <br>
-
-        <h2>2. What instrument does Lisa play</h2>
-        <input type="radio" name="q2" value="a">Guitar
-        <input type="radio" name="q2" value="b">Piano
-        <input type="radio" name="q2" value="c">Saxophone
-        <input type="radio" name="q2" value="d">Violin
-        <br>
-        <br>
-
-        <h2>3. What family do the Simpsons live next to?</h2>
-        <input type="radio" name="q3" value="a">The Wiggums
-        <input type="radio" name="q3" value="b">The Flanders
-        <input type="radio" name="q3" value="c">The Sanders
-        <input type="radio" name="q3" value="d">The Skinners
-        <br>
-        <br>
-
-        <h2>4. Who shot Mr. Burns?</h2>
-        <input type="radio" name="q4" value="a">Snake
-        <input type="radio" name="q4" value="b">Sideshow Bob
-        <input type="radio" name="q4" value="c">Maggie Simpson
-        <input type="radio" name="q4" value="d">Waylon Smithers
-        <br>
-        <br>
-
-        <h2>5. What does the 'J' in Homer J. Simpson stand for?</h2>
-        <input type="radio" name="q5" value="a">Jake
-        <input type="radio" name="q5" value="b">John
-        <input type="radio" name="q5" value="c">Jason
-        <input type="radio" name="q5" value="d">Jay
-        <br>
-        <br>
-
-        <h2>6. What phrase made Bart famous?</h2>
-        <input type="radio" name="q6" value="a">Eat my shorts!
-        <input type="radio" name="q6" value="b">Ay caramba!
-        <input type="radio" name="q6" value="c">Don't have a cow, man!
-        <input type="radio" name="q6" value="d">I didn't do it!
-        <br>
-        <br>
-
-        <h2>7. What secret society is Homer a part of?</h2>
-        <input type="radio" name="q7" value="a">The Stonecutters
-        <input type="radio" name="q7" value="b">Free Masons
-        <input type="radio" name="q7" value="c">Duff
-        <input type="radio" name="q7" value="d">Illuminati
-        <br>
-        <br>
-
-        <h2>8. Where does Apu work?</h2>
-        <input type="radio" name="q8" value="a">7/11
-        <input type="radio" name="q8" value="b">Kwik E-Mart
-        <input type="radio" name="q8" value="c">Quick Stop Groceries
-        <input type="radio" name="q8" value="d">Springfield Market
-        <br>
-        <br>
-
-        <h2>9. How many seasons of the show are there?</h2>
-        <input type="radio" name="q9" value="a">22
-        <input type="radio" name="q9" value="b">26
-        <input type="radio" name="q9" value="c">29
-        <input type="radio" name="q9" value="d">33
-        <br>
-        <br>
-
-        <h2>10. Who is the local bartender?</h2>
-        <input type="radio" name="q10" value="a">Lenny
-        <input type="radio" name="q10" value="b">Karl
-        <input type="radio" name="q10" value="c">Krusty
-        <input type="radio" name="q10" value="d">Moe
-    <br>
-        <br>
-        <button id="finished" class="btn btn-success btn-lg">Done!</button>
+        <div class="radio">
+            <div>
+                <h2>1. Where does Homer work?</h2>
+                <input type="radio" name="q1" value="a">Nuclear Power Plant
+                <input type="radio" name="q1" value="b">Bar
+                <input type="radio" name="q1" value="c">Insurance Company
+                <input type="radio" name="q1" value="d">School
+                <br>
+                <br>
+            </div>
+            <div>
+                <h2>2. What instrument does Lisa play</h2>
+                <input type="radio" name="q2" value="a">Guitar
+                <input type="radio" name="q2" value="b">Piano
+                <input type="radio" name="q2" value="c">Saxophone
+                <input type="radio" name="q2" value="d">Violin
+                <br>
+                <br>
+            </div>
+            <div>
+                <h2>3. What family do the Simpsons live next to?</h2>
+                <input type="radio" name="q3" value="a">The Wiggums
+                <input type="radio" name="q3" value="b">The Flanders
+                <input type="radio" name="q3" value="c">The Sanders
+                <input type="radio" name="q3" value="d">The Skinners
+                <br>
+                <br>
+            </div>
+            <div>
+                <h2>4. Who shot Mr. Burns?</h2>
+                <input type="radio" name="q4" value="a">Snake
+                <input type="radio" name="q4" value="b">Sideshow Bob
+                <input type="radio" name="q4" value="c">Maggie Simpson
+                <input type="radio" name="q4" value="d">Waylon Smithers
+                <br>
+                <br>
+            </div>
+            <div>
+                <h2>5. What does the 'J' in Homer J. Simpson stand for?</h2>
+                <input type="radio" name="q5" value="a">Jake
+                <input type="radio" name="q5" value="b">John
+                <input type="radio" name="q5" value="c">Jason
+                <input type="radio" name="q5" value="d">Jay
+                <br>
+                <br>
+            </div>
+            <div>
+                <h2>6. What phrase made Bart famous?</h2>
+                <input type="radio" name="q6" value="a">Eat my shorts!
+                <input type="radio" name="q6" value="b">Ay caramba!
+                <input type="radio" name="q6" value="c">Don't have a cow, man!
+                <input type="radio" name="q6" value="d">I didn't do it!
+                <br>
+                <br>
+            </div>
+            <div>
+                <h2>7. What secret society is Homer a part of?</h2>
+                <input type="radio" name="q7" value="a">The Stonecutters
+                <input type="radio" name="q7" value="b">Free Masons
+                <input type="radio" name="q7" value="c">Duff
+                <input type="radio" name="q7" value="d">Illuminati
+                <br>
+                <br>
+            </div>
+            <div>
+                <h2>8. Where does Apu work?</h2>
+                <input type="radio" name="q8" value="a">7/11
+                <input type="radio" name="q8" value="b">Kwik E-Mart
+                <input type="radio" name="q8" value="c">Quick Stop Groceries
+                <input type="radio" name="q8" value="d">Springfield Market
+                <br>
+                <br>
+            </div>
+            <div>
+                <h2>9. How many seasons of the show are there?</h2>
+                <input type="radio" name="q9" value="a">22
+                <input type="radio" name="q9" value="b">26
+                <input type="radio" name="q9" value="c">29
+                <input type="radio" name="q9" value="d">33
+                <br>
+                <br>
+            </div>
+            <div>
+                <h2>10. Who is the local bartender?</h2>
+                <input type="radio" name="q10" value="a">Lenny
+                <input type="radio" name="q10" value="b">Karl
+                <input type="radio" name="q10" value="c">Krusty
+                <input type="radio" name="q10" value="d">Moe
+                <br>
+                <br>
+            </div>
+        </div>
+        <button id="done" class="btn btn-success btn-lg">Done!</button>
     </div>
     <div id="results">
         <h1>Correct Answers:

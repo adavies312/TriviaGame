@@ -22,7 +22,7 @@
 ## In Game Screenshots
 
 ### Start of Game
-![Start](/assets/images/simspsons-start.png)
+![Start](/assets/images/simpsons-start.png)
 
 ### Quiz with Countdown Timer
 ![Quiz](/assets/images/simpsons-quiz.png)
